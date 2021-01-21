@@ -4,6 +4,8 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
@@ -15,7 +17,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Article {
+public class Post {
+	
+	public enum Type{
+		IMAGE, ARTICLE
+	}
+	
 	@Id
 	@Column(name = "id")
 	@GeneratedValue
@@ -24,23 +31,24 @@ public class Article {
 	@Column(name = "title")
 	private String title;
 	
-	public Article(String title, Date date, String icon, String poster, String content) {
+	public Post(String title, Date date, Image image, Type type, String content) {
 		super();
 		this.title = title;
 		this.date = date;
-		this.icon = icon;
-		this.poster = poster;
+		this.image = image;
+		this.type = type;
 		this.content = content;
 	}
 
 	@Column(name = "date")
 	private Date date;
 	
-	@Column(name = "icon")
-	private String icon;
+	@Enumerated(EnumType.STRING)
+	@Column(name = "type")
+	private Type type;
 	
-	@Column(name = "poster")
-	private String poster;
+	@Column(name = "image")
+	private Image image;
 
 	@Column(name = "content", columnDefinition = "nvarchar(1000)")
 	private String content;

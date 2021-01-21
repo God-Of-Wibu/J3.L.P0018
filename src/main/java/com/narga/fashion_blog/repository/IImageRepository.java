@@ -1,13 +1,12 @@
 package com.narga.fashion_blog.repository;
 
-import java.util.List;
-
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import com.narga.fashion_blog.entity.*;
+
+import com.narga.fashion_blog.entity.Image;
+
 
 @Repository
-public interface IArticleRepository extends CrudRepository<Article, Integer> {
-	List<Article> findAll();
+public interface IImageRepository extends CrudRepository<Image, Integer>{
 
 }

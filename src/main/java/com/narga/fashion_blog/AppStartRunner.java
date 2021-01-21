@@ -7,18 +7,18 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
-import com.narga.fashion_blog.entity.Article;
-import com.narga.fashion_blog.repository.IArticleRepository;
+import com.narga.fashion_blog.entity.Post;
+import com.narga.fashion_blog.repository.IPostRepository;
 
 @Component
 public class AppStartRunner implements ApplicationRunner {
 
 	@Autowired
-	IArticleRepository repository;
+	IPostRepository repository;
 	
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		repository.save(new Article("New York", null, null, null, "ollaaa"));
+		repository.save(new Post("New York", null, null, null, "ollaaa"));
 	}
 
 }
