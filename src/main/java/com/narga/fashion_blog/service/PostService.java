@@ -38,6 +38,7 @@ public class PostService implements IPostService {
 					"post_image_" + post.getId() + "." + FilenameUtils.getExtension(imagePart.getOriginalFilename()));
 			
 			post.setImage(image);
+			
 		} catch (IOException e) {
 			throw new PostCreationException("Unable to save image", e);
 		}
