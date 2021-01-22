@@ -1,0 +1,47 @@
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="post.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script type="text/javascript" src="post.js"></script>
+</head>
+<body>
+    <div class="main">
+    <header>
+        <div>
+          <div class="fasion-blog">
+               <div class="title">My Fashion Blog</div>
+               <div class="subtitle">Welcome to this website</div>
+          </div>
+          <div class="nav-menu">
+              <div>My Fashion Blog</div>
+              <div>About me</div>
+              <div>Contact</div>
+          </div>
+        </div>
+    </header>
+    <div class="new-post">
+		<div class="img-div">
+			<img id="blah" src="#" alt="your image" />
+			<input type="file" id="add-img"  onchange="readURL(this);">
+			<label for="add-img"><i class='far fa-plus-square'></i>
+			</label>
+		</div>
+		<div class="wrapper">
+			<div class="header-bar">
+				<div style="text-align: center;  font-family: 'Source Sans Pro',Helvetica,Arial,sans-serif;">
+					<strong>Description</strong>
+				</div>
+			</div>
+			<div class="content">
+				<textarea class="form-control" rows="5" name="description"></textarea>
+			</div>
+		</div>
+		<button class="add-btn" id="submitBtn">Submit</button>
+    </div>
+	</div>
+</body>
