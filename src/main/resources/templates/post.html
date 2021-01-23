@@ -25,6 +25,14 @@
         </div>
     </header>
     <div class="new-post">
+     <div class="type">
+    <label class="type-choose" for="type">Choose type post:</label>
+        <select name="cars" id="type">
+            <option value="Post image with content">Post image with content</option>
+            <option value="Post image">Post image</option>
+            <option value="Post content">Post content</option>
+        </select> 
+    </div>
 		<div class="img-div">
 			<img id="blah" src="#" alt="your image" />
 			<input type="file" id="add-img"  onchange="readURL(this);">
