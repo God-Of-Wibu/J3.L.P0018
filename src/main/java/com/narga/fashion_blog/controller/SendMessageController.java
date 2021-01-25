@@ -22,7 +22,7 @@ public class SendMessageController {
 		return "send-mesage";
 	};
 	
-	@PostMapping
+	@PostMapping("/send-message")
 	private String sendMessage(@ModelAttribute NewMessageForm form) {
 		meassageService.sendMessage(form);
 		return "redirect:/";

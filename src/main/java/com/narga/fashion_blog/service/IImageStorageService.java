@@ -3,6 +3,7 @@ package com.narga.fashion_blog.service;
 import java.io.IOException;
 import java.io.InputStream;
 
+import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.narga.fashion_blog.entity.Image;

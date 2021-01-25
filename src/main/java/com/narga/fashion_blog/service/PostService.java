@@ -1,11 +1,14 @@
 package com.narga.fashion_blog.service;
 
 import java.io.IOException;
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.narga.fashion_blog.controller.form_object.NewPostForm;
@@ -29,8 +32,9 @@ public class PostService implements IPostService {
 	}
 
 	@Override
+	@Transactional
 	public void createNewPost(NewPostForm form) {
-		Post post = postRepository.save(new Post(form.getTitle(), form.getDate(), null, null, form.getContent()));
+		Post post = postRepository.save(new Post(form.getTitle(), Date.valueOf(LocalDate.now()), null, form.getType(), form.getContent()));
 		try {
 			MultipartFile imagePart = form.getImage();
 

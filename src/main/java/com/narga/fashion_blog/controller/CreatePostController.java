@@ -19,11 +19,11 @@ public class CreatePostController {
 	
 	@GetMapping("/create-post")
 	private String createPost(Model model) {
-		model.addAttribute("formObject", new NewPostForm());
+		model.addAttribute("form", new NewPostForm());
 		return "create-post";
 	}
 	
-	@PostMapping
+	@PostMapping("/create-post")
 	private String createPost(@ModelAttribute NewPostForm form) {
 		postService.createNewPost(form);
 		return "redirect:/";
