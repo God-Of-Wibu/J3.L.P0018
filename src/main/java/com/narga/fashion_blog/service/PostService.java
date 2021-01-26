@@ -7,6 +7,8 @@ import java.util.List;
 
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -46,6 +48,11 @@ public class PostService implements IPostService {
 		} catch (IOException e) {
 			throw new PostCreationException("Unable to save image", e);
 		}
+	}
+
+	@Override
+	public List<Post> getNewestPosts() {
+		return postRepository.findAll(PageRequest.of(0, 4, Sort.by("date").descending()));
 	}
 
 }

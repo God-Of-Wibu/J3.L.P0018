@@ -11,4 +11,6 @@ public interface IPostService {
 	
 	void createNewPost(NewPostForm newPostForm) throws PostCreationException;
 	
+	List<Post> getNewestPosts();
+	
 }
