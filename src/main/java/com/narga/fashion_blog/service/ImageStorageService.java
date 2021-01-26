@@ -24,8 +24,8 @@ public class ImageStorageService implements IImageStorageService {
 	@Value("${narga.fashion_blog.file_dir}")
 	private String fileDirectory;
 
-	@Value("${narga.fashion_blog.file_url_prefix}")
-	private String fileUrlPrefix;
+	@Value("${narga.fashion_blog.image_url_prefix}")
+	private String imageUrlPrefix;
 
 	@Autowired
 	private IImageRepository repository;
@@ -61,7 +61,7 @@ public class ImageStorageService implements IImageStorageService {
 		String fileLocation = fileDirectory + "/" + name;
 		
 		writeToFile(stream, fileLocation);
-		return repository.save(new Image(fileUrlPrefix + "/"  + name, fileLocation));
+		return repository.save(new Image(imageUrlPrefix + "/"  + name, fileLocation));
 	}
 
 
