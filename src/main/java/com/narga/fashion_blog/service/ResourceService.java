@@ -18,7 +18,7 @@ public class ResourceService implements IResourceService, ResourceLoaderAware {
 
 	@Override
 	public Resource loadImage(String name) {
-		return resourceLoader.getResource(FILE_PREFIX + fileDirectory + name);
+		return resourceLoader.getResource(FILE_PREFIX + fileDirectory + "/" + name);
 	}
 
 	@Override

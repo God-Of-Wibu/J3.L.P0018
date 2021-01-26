@@ -5,7 +5,7 @@
 <title>My Fashion Blog - us-123fashion.simplesite.com</title>
 
 <link rel="stylesheet" type="text/css" href="../static/css/home.css"
-	th:href="@{/static/css/home.css">
+	th:href="@{/static/css/home.css}">
 
 <link rel="canonical"
 	href="http://us-123fashion.simplesite.com/410906719">
@@ -19,8 +19,8 @@
 <link rel="stylesheet" type="text/css"
 
 	href="../static/css/home-flag.css"
-	th:href="@{/static/css/home-flag.css">
-
+	th:href="@{/static/css/home-flag.css}">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <script type="text/javascript" async=""
 	src="../static/js/home.analytics.js.download"></script>
 <script async="" src="../static/js/home.gtm.js.download"></script>
@@ -125,19 +125,19 @@
 							<!-- - -->
 
 
-							<div class="content">
-								<div class="section">
+							<div class="content" >
+								<div class="section" th:each="post : ${posts}">
 									<div class="content">
 										<div class="avatar">
-											<i class="icon-camera-retro icon-4x" title="In New York"></i>
+											<i class="fa fa-camera-retro" aria-hidden="true"></i>
 										</div>
 										<div class="item">
 											<div class="controls">
-												<span class="date-text" th:text="${}">17-08-2014</span>
+												<span class="date-text" th:text="${#dates.format(post.date, 'dd-MM-yyyy')}">17-08-2014</span>
 											</div>
 											<div class="heading">
 												<h4>
-													<a rel="nofollow" href="#"> Title </a>
+													<a rel="nofollow" href="#" th:text="${post.title}"> Title </a>
 												</h4>
 											</div>
 
@@ -146,10 +146,10 @@
 													<div class="image">
 
 														<a rel="nofollow" data-ss="imagemodal" data-href=""
-															title="TITLE"><img src="../img/my-family.jpg"></a>
+															title="TITLE"><img src="../img/my-family.jpg" th:src="@{${post.image.url}}"></a>
 													</div>
 													<div class="image-caption">
-														<p class="sub2">CONTENT ................</p>
+														<p class="sub2" th:text="${post.content}">CONTENT ................</p>
 
 													</div>
 												</div>
@@ -159,41 +159,7 @@
 								</div>
 
 
-								<!-- - -->
-
-								<div class="section">
-									<div class="content">
-										<div class="avatar">
-											<i class="icon-camera-retro icon-4x" title="Special Offer"></i>
-										</div>
-										<div class="item">
-											<div class="controls">
-												<span class="date-text">17-08-2014</span>
-											</div>
-											<div class="heading">
-												<h4>
-													<a rel="nofollow"
-														href="http://us-123fashion.simplesite.com/410906719/2122859/posting/special-offer">TITLE</a>
-												</h4>
-											</div>
-
-											<div class="content">
-												<div class="img-simple  ">
-													<div class="image">
-														<a rel="nofollow" data-ss="imagemodal"
-															data-href="http://cdn.simplesite.com/i/25/d7/284852684260562725/i284852689410723270._szw1280h1280_.jpg"
-															title="TITLE"><img src="../img/"></a>
-													</div>
-													<div class="image-caption">
-														<p class="sub2">CONTENT ............</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- - -->
+							
 
 								<ul class="pager">
 									<li><a rel="nofollow"

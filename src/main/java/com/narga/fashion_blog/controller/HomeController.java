@@ -15,7 +15,7 @@ public class HomeController {
 
 	@GetMapping
 	private String uploadPost(Model model) {
-		model.addAttribute("post", postService.getNewestPosts());
+		model.addAttribute("posts", postService.getNewestPosts());
 		return "home";
 	}
 }
