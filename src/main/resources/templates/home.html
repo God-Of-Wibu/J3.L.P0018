@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <!-- saved from url=(0045)http://us-123fashion.simplesite.com/410906719 -->
-<html  xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>My Fashion Blog - us-123fashion.simplesite.com</title>
-<link rel="stylesheet" type="text/css"
-	href="../static/css/home.css" th:href="@{/static/css/home.css">
+<link rel="stylesheet" type="text/css" href="../static/css/home.css"
+	th:href="@{/static/css/home.css">
 <link rel="canonical"
 	href="http://us-123fashion.simplesite.com/410906719">
 <link rel="alternate" type="application/rss+xml"
@@ -15,14 +15,15 @@
 	title="My Fashion Blog RSS feed">
 <link rel="shortcut icon" href="data:image/x-icon;,">
 <link rel="stylesheet" type="text/css"
-	href="./home_files/jplayer.pink.flag.min.css">
+	href="../static/css/home-flag.css"
+	th:href="@{/static/css/home-flag.css">
 <script type="text/javascript" async=""
-	src="./home_files/analytics.js.download"></script>
-<script async="" src="./home_files/gtm.js.download"></script>
+	src="../static/js/home.analytics.js.download"></script>
+<script async="" src="../static/js/home.gtm.js.download"></script>
 <script type="text/javascript"
-	src="./home_files/FrontendAppLocalePage.aspx"></script>
+	src="../static/js/FrontendAppLocalePage.aspx"></script>
 <script type="text/javascript"
-	src="./home_files/frontendApp.min.js.download"></script>
+	src="../static/js/frontendApp.min.js.download"></script>
 <script type="text/javascript">
 	if (typeof window.jQuery == "undefined") {
 		(function() {
@@ -54,7 +55,6 @@
 <style type="text/css">
 .fancybox-margin {
 	margin-right: 17px;
-
 }
 </style>
 </head>
@@ -91,14 +91,11 @@
 							<div class="nav-collapse collapse">
 								<ul class="nav" id="topMenu" data-submenu="horizontal">
 									<li class=" active " style=""><a rel="nofollow"
-										href="http://us-123fashion.simplesite.com/410906719">My
-											Fashion Blog</a></li>
+										href="home.html">My Fashion Blog</a></li>
 									<li class="  " style=""><a rel="nofollow"
-										href="http://us-123fashion.simplesite.com/410906237">About
-											me</a></li>
+										href="About me.html">About me</a></li>
 									<li class="  " style=""><a rel="nofollow"
-										href="http://us-123fashion.simplesite.com/410906953">Contact</a>
-									</li>
+										href="Contact.html">Contact</a></li>
 								</ul>
 							</div>
 						</div>
@@ -120,6 +117,8 @@
 								<h1 class="page-title">Blog</h1>
 							</div>
 
+							<!-- - -->
+
 							<div class="content">
 								<div class="section">
 									<div class="content">
@@ -132,20 +131,18 @@
 											</div>
 											<div class="heading">
 												<h4>
-													My Family</a>
+													<a rel="nofollow" href="#"> Title </a>
 												</h4>
 											</div>
 
 											<div class="content">
 												<div class="img-simple  ">
 													<div class="image">
-														<a rel="nofollow" data-ss="imagemodal"
-															data-href="family.jpg"
-															title="Claritas est etiam processus dynamicus, qui sequitur"><img
-															src="family.jpg"></a>
+														<a rel="nofollow" data-ss="imagemodal" data-href=""
+															title="TITLE"><img src="../img/my-family.jpg"></a>
 													</div>
 													<div class="image-caption">
-														<p class="sub2">I Love My Family</p>
+														<p class="sub2">CONTENT ................</p>
 													</div>
 												</div>
 
@@ -155,10 +152,13 @@
 										</div>
 									</div>
 								</div>
+
+								<!-- - -->
+
 								<div class="section">
 									<div class="content">
 										<div class="avatar">
-											<i class="icon-pencil icon-4x" title="In New York"></i>
+											<i class="icon-camera-retro icon-4x" title="Special Offer"></i>
 										</div>
 										<div class="item">
 											<div class="controls">
@@ -167,98 +167,95 @@
 											<div class="heading">
 												<h4>
 													<a rel="nofollow"
-														href="http://us-123fashion.simplesite.com/410906719/2122872/posting/in-new-york">My
-														Homies</a>
+														href="http://us-123fashion.simplesite.com/410906719/2122859/posting/special-offer">TITLE</a>
 												</h4>
 											</div>
 
 											<div class="content">
-												<div class="img-simple span6 pull-left">
+												<div class="img-simple  ">
 													<div class="image">
 														<a rel="nofollow" data-ss="imagemodal"
-															data-href="homie.jpg"><img src="homie.jpg"></a>
+															data-href="http://cdn.simplesite.com/i/25/d7/284852684260562725/i284852689410723270._szw1280h1280_.jpg"
+															title="TITLE"><img src="../img/"></a>
+													</div>
+													<div class="image-caption">
+														<p class="sub2">CONTENT ............</p>
 													</div>
 												</div>
-
-												<p>
-													<span>This is my homies </span>
-												</p>
 											</div>
-
-
 										</div>
 									</div>
 								</div>
 
+								<!-- - -->
+
+								<ul class="pager">
+									<li><a rel="nofollow"
+										href="http://us-123fashion.simplesite.com/410906719?overview=1">Overview</a></li>
+								</ul>
 							</div>
+
+
 						</div>
 					</div>
-					<ul class="pager">
-						<li><a rel="nofollow"
-							href="http://us-123fashion.simplesite.com/410906719?overview=1">Overview</a></li>
-					</ul>
-				</div>
-
-
-			</div>
-		</div>
-		<div id="right" class="span3">
-			<div class="sidebar">
-				<div class="wrapper share-box">
-					<style>
+					<div id="right" class="span3">
+						<div class="sidebar">
+							<div class="wrapper share-box">
+								<style>
 .wordwrapfix {
 	word-wrap: break-word;
 }
 </style>
-					<div class="heading wordwrapfix">
-						<h4>Share this page</h4>
-					</div>
+								<div class="heading wordwrapfix">
+									<h4>Share this page</h4>
+								</div>
 
-					<div class="content">
-						<span><ul>
-								<li><a id="share-facebook"
-									href="http://us-123fashion.simplesite.com/410906719#"><i
-										class="icon-facebook-sign"></i><span>Share on Facebook</span></a></li>
-								<li><a id="share-twitter"
-									href="http://us-123fashion.simplesite.com/410906719#"><i
-										class="icon-twitter-sign"></i><span>Share on Twitter</span></a></li>
-								<li><a id="share-google-plus"
-									href="http://us-123fashion.simplesite.com/410906719#"><i
-										class="icon-google-plus-sign"></i><span>Share on
-											Google+</span></a></li>
-							</ul></span>
+								<div class="content">
+									<span><ul>
+											<li><a id="share-facebook"
+												href="http://us-123fashion.simplesite.com/410906719#"><i
+													class="icon-facebook-sign"></i><span>Share on
+														Facebook</span></a></li>
+											<li><a id="share-twitter"
+												href="http://us-123fashion.simplesite.com/410906719#"><i
+													class="icon-twitter-sign"></i><span>Share on Twitter</span></a></li>
+											<li><a id="share-google-plus"
+												href="http://us-123fashion.simplesite.com/410906719#"><i
+													class="icon-google-plus-sign"></i><span>Share on
+														Google+</span></a></li>
+										</ul></span>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	</div>
-	</div>
-	<!-- the controller has determined which view to be shown in the content -->
+		<!-- the controller has determined which view to be shown in the content -->
 
-	<div class="container-fluid footer-wrapper" id="footer">
-		<!-- this is the Footer Wrapper -->
-		<div class="container">
-			<div class="footer-info">
-				<div class="footer-powered-by">
-					<a rel="nofollow"
-						href="http://www.simplesite.com/pages/receive.aspx?partnerkey=123i%3afooterbanner&amp;referercustomerid=10674181&amp;refererpageid=410906719">Created
-						with SimpleSite</a>
+		<div class="container-fluid footer-wrapper" id="footer">
+			<!-- this is the Footer Wrapper -->
+			<div class="container">
+				<div class="footer-info">
+					<div class="footer-powered-by">
+						<a rel="nofollow"
+							href="http://www.simplesite.com/pages/receive.aspx?partnerkey=123i%3afooterbanner&amp;referercustomerid=10674181&amp;refererpageid=410906719">Created
+							with SimpleSite</a>
+					</div>
 				</div>
+				<div class="footer-page-counter" style="display: block;">
+					<span class="footer-page-counter-item">0</span> <span
+						class="footer-page-counter-item">5</span> <span
+						class="footer-page-counter-item">7</span> <span
+						class="footer-page-counter-item">3</span> <span
+						class="footer-page-counter-item">6</span> <span
+						class="footer-page-counter-item">8</span>
+				</div>
+				<div id="css_simplesite_com_fallback" class="hide"></div>
 			</div>
-			<div class="footer-page-counter" style="display: block;">
-				<span class="footer-page-counter-item">0</span> <span
-					class="footer-page-counter-item">5</span> <span
-					class="footer-page-counter-item">7</span> <span
-					class="footer-page-counter-item">3</span> <span
-					class="footer-page-counter-item">6</span> <span
-					class="footer-page-counter-item">8</span>
-			</div>
-			<div id="css_simplesite_com_fallback" class="hide"></div>
 		</div>
-	</div>
 
-	<!-- this is the Footer content -->
+		<!-- this is the Footer content -->
 	</div>
 
 
@@ -314,9 +311,7 @@
 			haspriority="true">
 	</div>
 	<div style="display: none; visibility: hidden;">
-		<script type="text/javascript">
-			var google_conversion_id = 1066686464, google_custom_params = window.google_tag_params, google_remarketing_only = !0;
-		</script>
+		<script type="text/javascript">var google_conversion_id=1066686464,google_custom_params=window.google_tag_params,google_remarketing_only=!0;</script>
 		<script type="text/javascript"
 			src="./home_files/conversion.js.download"></script>
 		<iframe name="google_conversion_frame" title="Google conversion frame"
