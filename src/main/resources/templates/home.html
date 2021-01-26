@@ -3,7 +3,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>My Fashion Blog - us-123fashion.simplesite.com</title>
-
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <link rel="stylesheet" type="text/css" href="../static/css/home.css"
 	th:href="@{/static/css/home.css}">
 
@@ -129,7 +130,7 @@
 								<div class="section" th:each="post : ${posts}">
 									<div class="content">
 										<div class="avatar">
-											<i class="fa fa-camera-retro" aria-hidden="true"></i>
+											<i class="fa fa-camera-retro" style='font-size:36px'' aria-hidden="true"></i>
 										</div>
 										<div class="item">
 											<div class="controls">
@@ -142,11 +143,11 @@
 											</div>
 
 											<div class="content">
-												<div class="img-simple  ">
+												<div class="img-simple  ">								
 													<div class="image">
-
-														<a rel="nofollow" data-ss="imagemodal" data-href=""
-															title="TITLE"><img src="../img/my-family.jpg" th:src="@{${post.image.url}}"></a>
+														<a rel="nofollow" data-ss="imagemodal"
+															data-href="" "
+															title="TITLE"><img src="../static/img/my-family.jpg" th:src="@{${post.image.url}}"></a>
 													</div>
 													<div class="image-caption">
 														<p class="sub2" th:text="${post.content}">CONTENT ................</p>

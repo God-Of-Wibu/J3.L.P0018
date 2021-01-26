@@ -1,5 +1,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../static/css/post.css" th:href="@{/static/css/post.css}">
@@ -37,10 +39,10 @@
 					<option value="article">Article</option>
 				</select>
 			</div>
-			<div class="img-div">
-				<img id="blah" src="#" alt="your image" /> <input type="file"
-					id="add-img" onchange="readURL(this);" th:field="${form.image}"> <label id="label"
-					for="add-img"><i class='far fa-plus-square'></i> </label>
+			<div class="img-div"> 
+				<img id="blah" src="#" alt="your image" /> 
+				<input type="file" id="add-img" onchange="readURL(this)" ld="${form.image}"></input>
+				   <label id="label" for="add-img"> <i class='far fa-plus-square'></i> </label>
 			</div>
 			<div class="wrapper" style="width: 50%">
 				<div class="header-bar">
