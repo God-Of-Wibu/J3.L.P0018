@@ -5,7 +5,7 @@ function readURL(input){
         reader.onload = function (e) {
             $('#blah').attr('src', e.target.result);
             $('#blah').css("display","block");
-            $('.img-div').css("height","50%");
+            $('.img-div').css("height","25%");
             $('.img-div').css("width","50%");
             $('.fa-plus-square').css("display","none");
         }
