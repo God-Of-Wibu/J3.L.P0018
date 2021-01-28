@@ -8,18 +8,6 @@
 <link rel="canonical"
 	href="http://us-123fashion.simplesite.com/410906953">
 <link rel="shortcut icon" href="data:image/x-icon;,">
-<script type="text/javascript" async=""
-	src="../static/js/analytics.js.download"
-	th:href="@{..static/js/analytics.js.download}"></script>
-<script async="" src="../static/js/gtm.js.download"
-	th:href="@{../static/js/gtm.js.download}"></script>
-<script type="text/javascript"
-	src="../static/js/FrontendAppLocalePage.aspx"
-	th:href="@{../static/js/FrontendAppLocalePage.aspx}"></script>
-<script type="text/javascript"
-	src="../static/js/frontendApp.min.js.download"
-	th:href="@{../static/js/frontendApp.min.js.download}"></script>
-
 <style type="text/css">
 .fancybox-margin {
 	margin-right: 0px;
@@ -104,14 +92,11 @@
 										</div>
 										<p>Write your message here. Fill out the form:</p>
 										<form class="message" th:action="@{/send-message}"
-											method="post" enctype="multipart/form-data">
-
+											method="post" >
 											<fieldset>
-
 												<div class="row-fluid">
 													<div class="span6">
-														<input type="text" name="author[name]"
-															placeholder="Write your name here"
+														<input type="text" name="author[name]"															
 															style="margin-bottom: 11px !important"
 															th:field="${formObject.name}"> <span
 															class="_help-block"></span>
@@ -119,7 +104,6 @@
 
 													<div class="span6">
 														<input type="text" name="author[email]"
-															placeholder="Write your email here"
 															style="margin-bottom: 11px !important"
 															th:field="${formObject.email}"> <span
 															class="_help-block"></span>
@@ -129,7 +113,6 @@
 												<div class="row-fluid">
 													<div class="span12">
 														<textarea id="contactFormMessageText" name="text"
-															placeholder="Write your message here"
 															style="margin-bottom: 11px !important"
 															th:field="${formObject.meassage}"></textarea>
 														<span class="_help-block"></span>
@@ -140,8 +123,8 @@
 
 												<div class="row-fluid">
 													<div class="span12">
-														<input class="btn btn-primary pull-right" type="submit" />Send
-															- Click here
+														<button class="btn btn-primary pull-right" type="submit" >Send
+															- Click here<button/>
 													</div>
 												</div>
 
