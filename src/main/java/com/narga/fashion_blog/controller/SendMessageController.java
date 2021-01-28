@@ -19,7 +19,7 @@ public class SendMessageController {
 	@GetMapping("/send-message")
 	private String sendMessage(Model model) {
 		model.addAttribute("formObject", new NewMessageForm() );
-		return "send-mesage";
+		return "send-message";
 	};
 	
 	@PostMapping("/send-message")

@@ -97,11 +97,11 @@
 								<ul class="nav" id="topMenu" data-submenu="horizontal">
 									<li class=" active " style=""><a rel="nofollow"
 
-										href="home.html">My Fashion Blog</a></li>
+										href="home.html" th:href="@{/}">My Fashion Blog</a></li>
 									<li class="  " style=""><a rel="nofollow"
-										href="About me.html">About me</a></li>
+										href="About me.html" th:href="@{/about-me}">About me</a></li>
 									<li class="  " style=""><a rel="nofollow"
-										href="Contact.html">Contact</a></li>
+										href="Contact.html" th:href="@{/send-message}">Contact</a></li>
 
 								</ul>
 							</div>
@@ -130,7 +130,7 @@
 								<div class="section" th:each="post : ${posts}">
 									<div class="content">
 										<div class="avatar">
-											<i class="fa fa-camera-retro" style='font-size:36px'' aria-hidden="true"></i>
+											<i class="fa fa-camera-retro" style='font-size:36px' aria-hidden="true"></i>
 										</div>
 										<div class="item">
 											<div class="controls">
@@ -146,7 +146,7 @@
 												<div class="img-simple  ">								
 													<div class="image">
 														<a rel="nofollow" data-ss="imagemodal"
-															data-href="" "
+															data-href="" 
 															title="TITLE"><img src="../static/img/my-family.jpg" th:src="@{${post.image.url}}"></a>
 													</div>
 													<div class="image-caption">
@@ -164,7 +164,7 @@
 
 								<ul class="pager">
 									<li><a rel="nofollow"
-										href="http://us-123fashion.simplesite.com/410906719?overview=1">Overview</a></li>
+										href="http://us-123fashion.simplesite.com/410906719?overview=1" th:href="@{overview}">Overview</a></li>
 								</ul>
 							</div>
 
@@ -212,7 +212,7 @@
 				<div class="footer-info">
 					<div class="footer-powered-by">
 						<a rel="nofollow"
-							href="create-post.html">Created
+							href="create-post.html" th:href="@{/create-post}">Created
 							with SimpleSite</a>
 					</div>
 				</div>

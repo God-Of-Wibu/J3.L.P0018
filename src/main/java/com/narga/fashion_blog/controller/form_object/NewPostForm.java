@@ -1,9 +1,5 @@
 package com.narga.fashion_blog.controller.form_object;
 
-import java.sql.Date;
-
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.narga.fashion_blog.entity.Post;

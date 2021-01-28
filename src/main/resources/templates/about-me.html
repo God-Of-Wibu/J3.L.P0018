@@ -12,7 +12,7 @@
 <
 <script type="text/javascript" async=""
 	src="../static/js/analytics.js.download"
-	th:href="@{..static/js/analytics.js.download"></script>
+	th:href="@{..static/js/analytics.js.download}"></script>
 <script async="" src="../static/js/gtm.js.download"
 	th:href="@{../static/js/gtm.js.download}"></script>
 <script type="text/javascript"
@@ -91,13 +91,13 @@
 							<div class="nav-collapse collapse">
 								<ul class="nav" id="topMenu" data-submenu="horizontal">
 									<li class="  " style=""><a rel="nofollow"
-										href="home.html">My
+										href="home.html" th:href="@{/}">My
 											Fashion Blog</a></li>
 									<li class=" active " style=""><a rel="nofollow"
-										href="About me">About
+										href="About me" th:href="@{/about-me}">About
 											me</a></li>
 									<li class="  " style=""><a rel="nofollow"
-										href="Contact.html">Contact</a>
+										href="Contact.html" th:href="@{/send-message}">Contact</a>
 									</li>
 								</ul>
 							</div>
@@ -192,7 +192,8 @@
 				<div class="footer-info">
 					<div class="footer-powered-by">
 						<a rel="nofollow"
-							href="http://www.simplesite.com/pages/receive.aspx?partnerkey=123i%3afooterbanner&amp;referercustomerid=10674181&amp;refererpageid=410906237">Created
+							href="http://www.simplesite.com/pages/receive.aspx?partnerkey=123i%3afooterbanner&amp;referercustomerid=10674181&amp;refererpageid=410906237"
+							th:href="@{/create-post}">Created
 							with SimpleSite</a>
 					</div>
 				</div>

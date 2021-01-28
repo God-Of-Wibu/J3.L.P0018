@@ -13,7 +13,7 @@ public class HomeController {
 	@Autowired
 	private IPostService postService;
 
-	@GetMapping
+	@GetMapping("/")
 	private String uploadPost(Model model) {
 		model.addAttribute("posts", postService.getNewestPosts());
 		return "home";
