@@ -130,9 +130,8 @@
 								<div class="section" th:each="post : ${posts}">
 									<div class="content">
 										<div class="avatar">
-									      <p id="type">IMAGE</p>
-											<i id="image" class="fa fa-camera-retro" style='font-size:36px' aria-hidden="true"></i>
-											<i id="article" class="fas fa-pen" style='font-size:36px' aria-hidden="true"></i>
+											<i th:if="${post.type.name == 'IMAGE'}" id="image" class="fa fa-camera-retro" style='font-size:36px' aria-hidden="true"></i>
+											<i th:if="${post.type.name == 'ARTICLE'}" id="article" class="fas fa-pen" style='font-size:36px' aria-hidden="true"></i>
 										</div>
 										<div class="item">
 											<div class="controls">

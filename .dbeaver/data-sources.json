@@ -17,8 +17,20 @@
 				"provider-properties": {
 					"@dbeaver-authentication@": "SQL_SERVER_PASSWORD",
 					"@dbeaver-show-all-schemas@": "false"
-				},
-				"handlers": {}
+				}
+			}
+		}
+	},
+	"virtual-models": {
+		"microsoft-17723b4fcb2-606c346432dbb323": {
+			"FashionBlog": {
+				"dbo": {
+					"@properties": {
+						"erd.diagram.state": {
+							"serialized": "<diagram version=\"1\" name=\"dbo\" time=\"202101281442\"><entities><data-source id=\"microsoft-17723b4fcb2-606c346432dbb323\"><entity id=\"1\" name=\"image\" fq-name=\"FashionBlog.dbo.image\" order=\"0\" x=\"391\" y=\"57\"><path name=\"dbo\"/><path name=\"FashionBlog\"/></entity><entity id=\"2\" name=\"message\" fq-name=\"FashionBlog.dbo.message\" order=\"1\" x=\"271\" y=\"214\"><path name=\"dbo\"/><path name=\"FashionBlog\"/></entity><entity id=\"3\" name=\"post\" fq-name=\"FashionBlog.dbo.post\" order=\"2\" x=\"212\" y=\"13\"><path name=\"dbo\"/><path name=\"FashionBlog\"/></entity></data-source></entities><relations><relation name=\"FKb219ddnjsokevt56qxhu2r4l\" fq-name=\"dbo.post.FKb219ddnjsokevt56qxhu2r4l\" type=\"fk\" pk-ref=\"1\" fk-ref=\"3\"/></relations></diagram>"
+						}
+					}
+				}
 			}
 		}
 	},
